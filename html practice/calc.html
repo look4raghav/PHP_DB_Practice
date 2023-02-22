@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+
+<script>
+
+function add(){
+var a,b,c;
+a=Number(document.getElementById("first").value);
+b=Number(document.getElementById("second").value);
+c= a + b;
+document.getElementById("first").innerHTML = a;
+document.getElementById("second").innerHTML = b;
+document.getElementById("answer").value= c;
+}
+
+function sub(){
+var a,b,c;
+a=Number(document.getElementById("first").value);
+b=Number(document.getElementById("second").value);
+c= a - b;
+document.getElementById("answer").value= c;
+}
+
+function mul(){
+var a,b,c;
+a=Number(document.getElementById("first").value);
+b=Number(document.getElementById("second").value);
+c= a * b;
+document.getElementById("answer").value= c;
+}
+
+function div(){
+var a,b,c;
+a=Number(document.getElementById("first").value);
+b=Number(document.getElementById("second").value);
+c= a / b;
+document.getElementById("answer").value= c;
+}
+
+</script>
+</head>
+<body>
+	<h1>CALCiii</h1>
+Enter the First number : <input id="first">
+<br>
+Enter the Second number: <input id="second">
+<br>
+<button onclick="add()">Add</button>
+<button onclick="sub()">Sub</button>
+<button onclick="mul()">Mul</button>
+<button onclick="div()">Div</button>
+<br>
+<input id="answer">
+<p><b>Numbers Entered:</b> <span id="first"></span> <b>and</b> <span id="second"></span></p>
+<p id="answer"></p>
+
+</body>
+</html>

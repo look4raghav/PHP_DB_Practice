@@ -1,0 +1,41 @@
+<html>
+<head>
+	<script>
+		function calculate(op) {
+		   var x = document.getElementById("num1").value;
+		   var y = document.getElementById("num2").value;
+		   
+		   document.getElementById("n1").innerHTML = x;
+		   document.getElementById("n2").innerHTML = y;
+		   
+		   if(op == "A")
+		   {
+			var z = x + y;
+			document.getElementById("otpt").innerHTML = "<b>Sum = </b>" + z;
+		   }
+
+		   if(op == "M")
+		   {
+			var z = x * y;
+			document.getElementById("otpt").innerHTML = "<b>Product = </b>" + z;
+		   }
+
+		   
+		}
+	</script>
+</head>
+
+<body>
+<form>
+	Enter first number: <input type="text"id="num1" size="5" maxlength="2"><br><br>
+	Enter second number: <input type="text"id="num2" size="5" maxlength="2"><br><br>
+
+	<input type="button" value="Add" onClick="calculate('A')">
+
+	<input type="button" value="Multiply" onClick="calculate('M')">
+	
+	<p><b>Numbers entered:</b> <span id="n1"></span> <b>and</b> <span id="n2"></span></p>
+	<p id="otpt"></p>
+</form>
+</body>
+</html>
